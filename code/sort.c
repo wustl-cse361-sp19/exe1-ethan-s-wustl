@@ -58,7 +58,19 @@ static void generate_input(int *array, int n) {
  * in increasing order.
  **/
 static void sort_input(int *array,  int n) {
-    
+    int hasSwap = TRUE;
+    while (hasSwap) {
+        hasSwap = FALSE;
+        for (int i = 0; i < n - 1; i++) {
+            if (array[i] > array[i+1]) {
+                int tmp = array[i];
+                array[i] = array[i+1];
+                array[i + 1] = tmp;
+                hasSwap = TRUE;
+            }
+        }
+
+    }
     // It's your job to implement this simple bubble sort routine
 }
 
